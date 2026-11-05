@@ -19,6 +19,11 @@ public class Config {
             try (Reader r = Files.newBufferedReader(path)) {
                 props.load(r);
             }
+            setDefault("bind", "0.0.0.0");
+            setDefault("port", "8765");
+            setDefault("token", newToken());
+            setDefault("mc_dir", System.getProperty("user.home") + "/minecraft");
+            save();
         }
     }
 
