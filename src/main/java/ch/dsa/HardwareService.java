@@ -16,8 +16,8 @@ public class HardwareService implements IService {
     private double getTotalMemory() {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemTotal")) {
-                String totalMem = line.substring(line.indexOf(":") + 1).trim();
-                return Double.parseDouble(totalMem);
+                String [] totalMem = line.split("\\s+");
+                return Double.parseDouble(totalMem[1]);
             }
         }
         return -1;
