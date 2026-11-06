@@ -17,7 +17,7 @@ public class HardwareService implements IService {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemTotal")) {
                 String [] totalMem = line.split("\\s+");
-                return Double.parseDouble(totalMem[1]);
+                return Double.parseDouble(totalMem[1]) / 1000;
             }
         }
         return -1;
