@@ -13,6 +13,7 @@ import java.util.Map;
 public class DashboardHandler implements HttpHandler {
     private final Config cfg;
     private final StatsSampler sampler;
+    private final HardwareService hardware = new HardwareService();
     private final Gson gson = new Gson();
 
     public DashboardHandler(Config cfg, StatsSampler sampler) {
@@ -30,6 +31,7 @@ public class DashboardHandler implements HttpHandler {
             String path = ex.getRequestURI().getPath();
             switch (path) {
                 case "/api/status" -> sendJson(ex, 200, sampler.latest());
+                case "/api/hardware" -> sendJson(ex, 200, hardware.collect());
                 default            -> sendJson(ex, 404, Map.of("error", "not found"));
             }
         } finally {
