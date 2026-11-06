@@ -32,8 +32,11 @@ public class DashboardHandler implements HttpHandler {
             switch (path) {
                 case "/api/status" -> sendJson(ex, 200, sampler.latest());
                 case "/api/hardware" -> sendJson(ex, 200, hardware.collect());
-                default            -> sendJson(ex, 404, Map.of("error", "not found"));
+                default -> sendJson(ex, 404, Map.of("error", "not found"));
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+            sendJson(ex, 500, Map.of("error", String.valueOf(e.getMessage())));
         } finally {
             ex.close();
         }
