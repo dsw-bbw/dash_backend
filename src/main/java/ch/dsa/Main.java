@@ -1,6 +1,9 @@
 package ch.dsa;
 
 import com.sun.net.httpserver.HttpServer;
+
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.file.Path;
 import java.util.concurrent.*;
@@ -20,7 +23,7 @@ public class Main {
         server.setExecutor(Executors.newCachedThreadPool());
         server.start();
 
-        System.out.println("Dashboard läuft: http://localhost:" + cfg.get("port") + "/");
+        System.out.println("Dashboard läuft: http://" + localIp() + ":" + cfg.get("port") + "/");
         System.out.println("Token:          " + cfg.get("token") + "   (steht auch in " + cfg.getPath() + ")");
         System.out.println("Minecraft-Ordner: " + cfg.get("mc_dir"));
 
@@ -29,5 +32,14 @@ public class Main {
             server.stop(1);
             jobs.shutdownNow();
         }));
+    }
+
+    private static String localIp() {
+        try (DatagramSocket socket = new DatagramSocket()) {
+            socket.connect(InetAddress.getByName("8.8.8.8"), 80);
+            return socket.getLocalAddress().getHostAddress();
+        } catch (Exception e) {
+            return "localhost";
+        }
     }
 }

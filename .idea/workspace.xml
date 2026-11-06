@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe56713f-3bda-4925-8e3e-8957bd16a5a9" name="Changes" comment="Correct Path to Main Class">
+    <list default="true" id="fe56713f-3bda-4925-8e3e-8957bd16a5a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/dsa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/dsa/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,18 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Karma3560"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Karma3560&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dsw-bbw/dash_backend.git",
-    "accountId": "9c4b61a7-df65-4d37-9f0d-e7f15e1b2a76"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dsw-bbw/dash_backend.git&quot;,
+    &quot;accountId&quot;: &quot;9c4b61a7-df65-4d37-9f0d-e7f15e1b2a76&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -42,65 +43,65 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.000000000000172" />
-      <entry key="S5" value="1.0000325680969069" />
-      <entry key="S10" value="1.020073269464454" />
-      <entry key="S30" value="2.4936111162853187" />
-      <entry key="S60" value="5.403180124085917" />
-      <entry key="M2" value="8.63116477964246" />
-      <entry key="M5" value="16.06511619326337" />
-      <entry key="M10" value="32.664995893221985" />
-      <entry key="M15" value="45.914392792624774" />
-      <entry key="M30" value="67.52528777997692" />
-      <entry key="H1" value="83.0653434637449" />
-      <entry key="H2" value="92.41153000227533" />
-      <entry key="H4" value="97.54046686072108" />
-      <entry key="D1" value="102.06621676164379" />
-      <entry key="W1" value="102.86600589182349" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0000000001197096" />
+      <entry key="S30" value="1.0016587710628089" />
+      <entry key="S60" value="1.114134928637016" />
+      <entry key="M2" value="2.1634380787796146" />
+      <entry key="M5" value="8.02994684506556" />
+      <entry key="M10" value="21.24566055401434" />
+      <entry key="M15" value="34.387075886666025" />
+      <entry key="M30" value="60.93678122373612" />
+      <entry key="H1" value="83.68211587378067" />
+      <entry key="H2" value="98.74143625431455" />
+      <entry key="H4" value="107.42950952230106" />
+      <entry key="D1" value="115.3397776481301" />
+      <entry key="W1" value="116.76117714787051" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.1690985844804973E-217" />
-      <entry key="S5" value="1.6870985566362349E-87" />
-      <entry key="S10" value="4.1074305309234746E-44" />
-      <entry key="S30" value="3.4502990795607463E-15" />
-      <entry key="S60" value="5.87392465014724E-8" />
-      <entry key="M2" value="2.4236180908194342E-4" />
-      <entry key="M5" value="0.03579197589211549" />
-      <entry key="M10" value="0.18918767373197326" />
-      <entry key="M15" value="0.32955549547447877" />
-      <entry key="M30" value="0.574069242752543" />
-      <entry key="H1" value="0.7576735726898124" />
-      <entry key="H2" value="0.8704444684698799" />
-      <entry key="H4" value="0.9329761349948241" />
-      <entry key="D1" value="0.9885039805299923" />
-      <entry key="W1" value="0.9983495621100479" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.2573174929803771E-137" />
+      <entry key="S10" value="3.545867302904006E-69" />
+      <entry key="S30" value="1.5248981106025205E-23" />
+      <entry key="S60" value="3.904994379768703E-12" />
+      <entry key="M2" value="1.9761058624903418E-6" />
+      <entry key="M5" value="0.005227861610631345" />
+      <entry key="M10" value="0.07230395293918145" />
+      <entry key="M15" value="0.17355669080817807" />
+      <entry key="M30" value="0.4166013571847525" />
+      <entry key="H1" value="0.6454466338782422" />
+      <entry key="H2" value="0.8033969341976864" />
+      <entry key="H4" value="0.8963241234049694" />
+      <entry key="D1" value="0.9819231839623614" />
+      <entry key="W1" value="0.9973973644926094" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.07966003920745389" />
-      <entry key="MS500" value="0.6029039138453802" />
-      <entry key="S2" value="0.8811747130968652" />
-      <entry key="S5" value="0.9506916499816589" />
-      <entry key="S10" value="0.9950845845077682" />
-      <entry key="S30" value="2.4850561642492712" />
-      <entry key="S60" value="5.39873892339132" />
-      <entry key="M2" value="8.628864940743838" />
-      <entry key="M5" value="16.09148153481407" />
-      <entry key="M10" value="32.83433429993459" />
-      <entry key="M15" value="46.222153790842526" />
-      <entry key="M30" value="68.08132338645854" />
-      <entry key="H1" value="83.8114024770217" />
-      <entry key="H2" value="93.27538178187743" />
-      <entry key="H4" value="98.46993059819492" />
-      <entry key="D1" value="103.0541035207638" />
-      <entry key="W1" value="103.86426647545636" />
+      <entry key="MS100" value="2.170026077066823E-4" />
+      <entry key="MS500" value="0.18505166225000613" />
+      <entry key="S2" value="0.6558782778120646" />
+      <entry key="S5" value="0.8447521369156257" />
+      <entry key="S10" value="0.9191039860293106" />
+      <entry key="S30" value="0.9739299424074936" />
+      <entry key="S60" value="1.1000878941657253" />
+      <entry key="M2" value="2.1557617471148474" />
+      <entry key="M5" value="8.029423715546972" />
+      <entry key="M10" value="21.30752272224476" />
+      <entry key="M15" value="34.5470279408758" />
+      <entry key="M30" value="61.33909449002997" />
+      <entry key="H1" value="84.31702745993101" />
+      <entry key="H2" value="99.5384169901423" />
+      <entry key="H4" value="108.3222907354679" />
+      <entry key="D1" value="116.32105923326365" />
+      <entry key="W1" value="117.75848153924433" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LhawrRih2pF4DC89GL9CQGCS6Y" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -114,6 +115,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
@@ -126,14 +128,16 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Damian/OneDrive/Desktop/dash_backend/src/main/java/ch/dsa/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+        <option value="bundled-jdk-30f59d01ecdd-ac68fc9d2b05-intellij.indexing.shared.core-IU-263.7307.200" />
       </set>
     </attachedChunks>
   </component>
@@ -176,6 +180,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Correct Path to Main Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correct Path to Main Class" />
+    <MESSAGE value="Set default Values" />
+    <MESSAGE value="Correct Config Constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correct Config Constructor" />
   </component>
 </project>

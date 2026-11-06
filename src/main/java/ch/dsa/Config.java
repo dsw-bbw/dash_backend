@@ -23,7 +23,7 @@ public class Config {
         setDefault("bind", "0.0.0.0");
         setDefault("port", "8765");
         setDefault("token", newToken());
-        setDefault("mc_dir", System.getProperty("user.home") + "/minecraft");
+        setDefault("mc_dir", System.getProperty("user.home") + "/server");
         save();
     }
 
