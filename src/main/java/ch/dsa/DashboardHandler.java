@@ -1,5 +1,7 @@
 package ch.dsa;
 
+import ch.dsa.service.HardwareService;
+import ch.dsa.service.OSService;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -14,6 +16,7 @@ public class DashboardHandler implements HttpHandler {
     private final Config cfg;
     private final StatsSampler sampler;
     private final HardwareService hardware = new HardwareService();
+    private final OSService os = new OSService();
     private final Gson gson = new Gson();
 
     public DashboardHandler(Config cfg, StatsSampler sampler) {
@@ -32,6 +35,7 @@ public class DashboardHandler implements HttpHandler {
             switch (path) {
                 case "/api/status" -> sendJson(ex, 200, sampler.latest());
                 case "/api/hardware" -> sendJson(ex, 200, hardware.collect());
+                case "/api/os" -> sendJson(ex, 200, os.collect());
                 default -> sendJson(ex, 404, Map.of("error", "not found"));
             }
         } catch (Exception e) {

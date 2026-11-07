@@ -1,4 +1,4 @@
-package ch.dsa;
+package ch.dsa.service;
 
 import ch.dsa.utility.FileUtility;
 
