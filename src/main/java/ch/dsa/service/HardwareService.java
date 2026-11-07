@@ -1,21 +1,12 @@
 package ch.dsa.service;
 
+import ch.dsa.annotation.Collect;
 import ch.dsa.utility.FileUtility;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class HardwareService implements IService {
-    @Override
-    public Map<String, Object> collect() {
-        Map<String, Object> map = new LinkedHashMap<>();
-        map.put("totalMem", getTotalMemory());
-        map.put("availableMem", getAvailableMemory());
-        map.put("diskStorage", getTotalDiskStorage());
-        return map;
-    }
-
+    @Collect("totalMem")
     private double getTotalMemory() {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemTotal")) {
@@ -26,6 +17,7 @@ public class HardwareService implements IService {
         return -1;
     }
 
+    @Collect("availableMem")
     private double getAvailableMemory() {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemAvailable")) {
@@ -36,6 +28,7 @@ public class HardwareService implements IService {
         return -1;
     }
 
+    @Collect("diskStorage")
     private double getTotalDiskStorage() {
         String sections = FileUtility.readLines("/sys/block/sdb/size").trim();
         long bytes = Long.parseLong(sections) * 512;
