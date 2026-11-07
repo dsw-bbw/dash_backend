@@ -9,7 +9,8 @@ public class HardwareService implements IService {
     @Override
     public Map<String, Object> collect() {
         map.put("totalMem", getTotalMemory());
-
+        map.put("availableMem", getAvailableMemory());
+        map.put("diskStorage", getTotalDiskStorage());
         return map;
     }
 
@@ -21,6 +22,22 @@ public class HardwareService implements IService {
             }
         }
         return -1;
+    }
+
+    private double getAvailableMemory() {
+        for (String line : getMemoryList()) {
+            if (line.startsWith("MemAvailable")) {
+                String[] availableMem = line.split("\\s+");
+                return Double.parseDouble(availableMem[1]) / 1000;
+            }
+        }
+        return -1;
+    }
+
+    private double getTotalDiskStorage() {
+        String sections = FileUtility.readLines("/sys/block/sda/size").trim();
+        long bytes = Long.parseLong(sections) * 512;
+        return (double) bytes / (1024 * 1024);
     }
 
     private List<String> getMemoryList() {
