@@ -12,6 +12,7 @@ public class OSService implements IService {
     }
 
     private double getUptime() {
-        return Double.parseDouble(FileUtility.readLines("/proc/uptime"));
+        String[] uptime = FileUtility.readSplitLines("/proc/uptime");
+        return Double.parseDouble(uptime[0]);
     }
 }

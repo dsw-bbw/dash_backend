@@ -1,5 +1,7 @@
 package ch.dsa;
 
+import ch.dsa.utility.FileUtility;
+
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.nio.file.Files;
@@ -33,7 +35,7 @@ public class StatsSampler {
     private Map<String, Object> readMemInfo() throws IOException {
         long total = 0, available = 0;
         for (String line : Files.readAllLines(Path.of("/proc/meminfo"))) {
-            String[] parts = line.split("\\s+");
+            String[] parts = FileUtility.splitString(line);
             if (parts[0].equals("MemTotal:"))     total = Long.parseLong(parts[1]);
             if (parts[0].equals("MemAvailable:")) available = Long.parseLong(parts[1]);
         }

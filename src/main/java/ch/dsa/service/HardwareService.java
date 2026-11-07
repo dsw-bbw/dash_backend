@@ -17,7 +17,7 @@ public class HardwareService implements IService {
     private double getTotalMemory() {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemTotal")) {
-                String [] totalMem = line.split("\\s+");
+                String[] totalMem = FileUtility.splitString(line);
                 return Double.parseDouble(totalMem[1]) / 1000;
             }
         }
@@ -27,7 +27,7 @@ public class HardwareService implements IService {
     private double getAvailableMemory() {
         for (String line : getMemoryList()) {
             if (line.startsWith("MemAvailable")) {
-                String[] availableMem = line.split("\\s+");
+                String[] availableMem = FileUtility.splitString(line);
                 return Double.parseDouble(availableMem[1]) / 1000;
             }
         }

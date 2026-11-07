@@ -14,11 +14,19 @@ public class FileUtility {
         }
     }
 
+    public static String[] readSplitLines(String path) {
+        return splitString(readLines(path));
+    }
+
     public static List<String> readFile(String path) {
         try {
             return Files.readAllLines(Path.of(path));
         } catch (Exception e) {
             return Collections.emptyList();
         }
+    }
+
+    public static String[] splitString(String s) {
+        return s.split("\\s+");
     }
 }
