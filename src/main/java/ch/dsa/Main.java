@@ -12,14 +12,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Config cfg = new Config(Path.of("config.properties"));
 
-        ScheduledExecutorService jobs = Executors.newScheduledThreadPool(2);
-
-        StatsSampler sampler = new StatsSampler();
-        sampler.start(jobs);
-
         HttpServer server = HttpServer.create(
                 new InetSocketAddress(cfg.get("bind"), cfg.getInt("port")), 0);
-        server.createContext("/", new DashboardHandler(cfg, sampler));
+        server.createContext("/", new DashboardHandler(cfg));
         server.setExecutor(Executors.newCachedThreadPool());
         server.start();
 
@@ -30,7 +25,6 @@ public class Main {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("Beende Dashboard …");
             server.stop(1);
-            jobs.shutdownNow();
         }));
     }
 

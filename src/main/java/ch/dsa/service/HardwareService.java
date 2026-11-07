@@ -2,12 +2,14 @@ package ch.dsa.service;
 
 import ch.dsa.utility.FileUtility;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 public class HardwareService implements IService {
     @Override
     public Map<String, Object> collect() {
+        Map<String, Object> map = new LinkedHashMap<>();
         map.put("totalMem", getTotalMemory());
         map.put("availableMem", getAvailableMemory());
         map.put("diskStorage", getTotalDiskStorage());
