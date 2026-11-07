@@ -35,7 +35,7 @@ public class HardwareService implements IService {
     }
 
     private double getTotalDiskStorage() {
-        String sections = FileUtility.readLines("/sys/block/sda/size").trim();
+        String sections = FileUtility.readLines("/sys/block/sdb/size").trim();
         long bytes = Long.parseLong(sections) * 512;
         return (double) bytes / (1024 * 1024);
     }
