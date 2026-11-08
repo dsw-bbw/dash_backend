@@ -51,7 +51,7 @@ public class PropertyService implements IService {
 
     private String getValueFromKey(String key) {
         for (String line : getPropertyFile()) {
-            if (line.contains(key)) {
+            if (line.split("=")[0].equals(key)) {
                 return line.split("=")[1];
             }
         }
