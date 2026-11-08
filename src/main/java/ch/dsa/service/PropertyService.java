@@ -59,6 +59,6 @@ public class PropertyService implements IService {
     }
 
     private List<String> getPropertyFile() {
-        return FileUtility.readFile("/home/damian/server/server.properties");
+        return FileUtility.readFile("~/server/server.properties");
     }
 }
