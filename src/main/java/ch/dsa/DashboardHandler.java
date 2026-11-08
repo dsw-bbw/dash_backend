@@ -2,6 +2,7 @@ package ch.dsa;
 
 import ch.dsa.service.HardwareService;
 import ch.dsa.service.OSService;
+import ch.dsa.service.PropertyService;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -16,6 +17,7 @@ public class DashboardHandler implements HttpHandler {
     private final Config cfg;
     private final HardwareService hardware = new HardwareService();
     private final OSService os = new OSService();
+    private final PropertyService property = new PropertyService();
     private final Gson gson = new Gson();
 
     public DashboardHandler(Config cfg) {
@@ -31,9 +33,10 @@ public class DashboardHandler implements HttpHandler {
             }
             String path = ex.getRequestURI().getPath();
             switch (path) {
-                case "/api/hardware" -> sendJson(ex, 200, hardware.collect());
-                case "/api/os" -> sendJson(ex, 200, os.collect());
-                default -> sendJson(ex, 404, Map.of("error", "not found"));
+                case "/api/hardware"    -> sendJson(ex, 200, hardware.collect());
+                case "/api/os"          -> sendJson(ex, 200, os.collect());
+                case "/api/property"    -> sendJson(ex, 200, property.collect());
+                default                 -> sendJson(ex, 404, Map.of("error", "not found"));
             }
         } catch (Exception e) {
             e.printStackTrace();
